@@ -19,7 +19,8 @@ public class SelenideGitTest {
     void selenideTest(){
         open("/selenide/selenide");
         $("#wiki-tab").click();
-        $(byText("Soft assertions")).click();
+        $(".js-wiki-more-pages-link").click();
+        $(byText("SoftAssertions")).click();
         $(".markdown-body").shouldHave(text("Using JUnit5 extend test class:"));
     }
 
